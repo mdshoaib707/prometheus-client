@@ -46,6 +46,6 @@ Once our app is deployed we can see the metrics in prometheus as below. <br />
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/prometheus-all-metrics.png)
 
 
-<b>We can see the average response time in milliseconds by using the following formula.</b>
+<br /><b>We can see the average response time in milliseconds by using the following formula.</b><br />
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/average-response-duration.png)
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/average-response-5m-msec.png)
