@@ -1,12 +1,10 @@
 import unittest
 
-import time
 from flask import Flask, render_template_string, abort
 from flask import request
-from prometheus_client import generate_latest, REGISTRY, Counter, Histogram, Summary, CollectorRegistry, Gauge
+from prometheus_client import generate_latest, REGISTRY, Histogram, Gauge
 
 import app
-import math
 
 class TestMetrics(unittest.TestCase):
     def test_index(self):
@@ -30,7 +28,7 @@ class TestMetrics(unittest.TestCase):
         self.assertEqual(0, self.registry.get_sample_value(
             'sample_external_url_up', labels={"url": "https://httpstat.us/502"}
         ))
-
+    
 
     def tearDown(self):
         app.metrics()
@@ -39,4 +37,3 @@ class TestMetrics(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
