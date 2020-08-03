@@ -56,5 +56,6 @@ Once our app is deployed we can see the metrics in prometheus as below. <br />
 <br /><h3><b>To check the 95 percentile of the metrics use the below formula.</b></h3>
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/percent-95-quantile.png)
 
-<br /><h3><b>We can also check the metrics by using graphs of our choice. We can see the url "https://httpstat.us/200" is giving the response as 1 whereas "https://httpstat.us/503" is giving response as 0. We can also see the average response time and the 95 percentile metrics using the aforementioned formula</b></h3>
+<br /><h3><b>We can also check the metrics by using graphs of our choice in the Grafana Dashboard. We can see the url "https://httpstat.us/200" is giving the response as 1 whereas "https://httpstat.us/503" is giving as 0. We can also see the average response time and the 95 percentile metrics using the aforementioned formula. 95 percentile is request duration within which you have served 95% of requests. We took 5 mins as the decay time.</b></h3>
+
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/grafana.png)
