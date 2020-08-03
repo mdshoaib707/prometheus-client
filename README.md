@@ -34,13 +34,15 @@ cd prometheus-client/ci/prometheus-deploy/
 sh helm.sh
 ```
 The script will deploy prometheus, grafana, alert manager in the cluster using the values.yml file. We have added the scrap config for our python app to collect metrics from. It is mentioned here https://github.com/mdshoaib707/prometheus-client/blob/develop/ci/prometheus-deploy/values.yml#L1874-L1876. The "static_configs" is where our python app is running. This will deploy under `monitoring` namespace. <br />
+![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/deployments-prometheus.png)
 
 Deploy the python app in cluster.
 ```
 cd prometheus-client/ci/
 helm upgrade --install myapp --namespace app myapp --debug
 ```
-This will deploy the app under `app` namespace. <br />
+This will deploy the app under `app` namespace as seen below. <br />
+![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/deployments-app.png)
 
 Once our app is deployed we can see the metrics in prometheus as below. <br />
 
