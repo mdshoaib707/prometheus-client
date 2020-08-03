@@ -1,11 +1,9 @@
-import urllib.request
-import ssl
 import requests
 
-import time
 from flask import Flask, render_template_string, abort
 from flask import request
-from prometheus_client import generate_latest, REGISTRY, Counter, Histogram, Summary, CollectorRegistry, Gauge
+from prometheus_client import generate_latest, REGISTRY, Histogram, Gauge
+
 
 
 app = Flask(__name__)
@@ -24,7 +22,6 @@ def metrics():
     for uri in ("200", "502"):
         url1 = "https://httpstat.us/" + uri
         response = requests.get(url1, timeout=5)
-
         responseMilliSecs = 1000 * response.elapsed.total_seconds()
         responseStatusCode = response.status_code
 
@@ -41,4 +38,3 @@ def metrics():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-
