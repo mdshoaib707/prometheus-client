@@ -9,3 +9,14 @@ To run the application, type in the command <br />
 Once the application is running we will get the metrics in "/metrics" as seen in the below screenshot. <br />
 
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/app-metrics.png)
+
+<br />
+Now we will see how to build and deploy the application.
+
+<br />
+Build and push the app
+cd to the root of this repo.
+`cd prometheus-client/`
+`docker build -t mdshoaib707/prometheus-client:1.2 .`
+`docker push mdshoaib707/prometheus-client:1.2`
+
