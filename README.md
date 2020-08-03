@@ -24,3 +24,9 @@ docker build -t mdshoaib707/prometheus-client:1.2 .
 docker push mdshoaib707/prometheus-client:1.2
 ```
 
+Deploy Prometheus, Grafana in the k8s cluster
+```
+cd prometheus-client/ci/prometheus-deploy/
+sh helm.sh
+```
+The script will deploy prometheus, grafana, alert manager in the cluster using the values.yml file. We have added the scrap config for our python app to collect metrics from. It is mentioned here https://github.com/mdshoaib707/prometheus-client/blob/develop/ci/prometheus-deploy/values.yml#L1874-L1876
