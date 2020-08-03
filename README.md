@@ -1,9 +1,11 @@
-Prometheus-client using Python
-Prometheus Client python
+#Prometheus Client using Python
 
 Steps to deploy and observe the metrics in prometheus, grafana using Python client library
 The main code is written in the file "app.py". It runs on 5000 port. In this file we are using Gauge and Histogram. Gauge is used whether the site is up or not. Like it will be either 1 or 0. Histogram is used to collect the response time which we got for accessing the external urls.
 
-To run the application, type in the command
+To run the application, type in the command <br />
 `python3 app.py`
 
+Once the application is running we will get the metrics in "/metrics" as seen in the below screenshot. <br />
+
+![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/app-metrics.png)
