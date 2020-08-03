@@ -49,9 +49,12 @@ Once our app is deployed we can see the metrics in prometheus as below. <br />
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/prometheus-all-metrics.png)
 
 
-<br /><h3><b>We can see the average response time in milliseconds by using the following formula.</b></h3><br />
+<br /><h3><b>We can see the average response time in milliseconds by using the following formula.</b></h3>
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/average-response-duration.png)
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/average-response-5m-msec.png)
 
-<br /><h3><b>To check the 95 percentile of the metrics use the below formula.</b></h3><br />
+<br /><h3><b>To check the 95 percentile of the metrics use the below formula.</b></h3>
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/percent-95-quantile.png)
+
+<br /><h3><b>We can also check the metrics by using graphs of our choice. We can see the url "https://httpstat.us/200" is giving the response as 1 whereas "https://httpstat.us/503" is giving response as 0. We can also see the average response time and the 95 percentile metrics using the aforementioned formula</b></h3>
+![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/grafana.png)
