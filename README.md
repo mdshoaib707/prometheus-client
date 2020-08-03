@@ -15,8 +15,12 @@ Now we will see how to build and deploy the application.
 
 <br />
 Build and push the app
+<br />
 cd to the root of this repo.
 `cd prometheus-client/`
+<br />
 `docker build -t mdshoaib707/prometheus-client:1.2 .`
+<br />
 `docker push mdshoaib707/prometheus-client:1.2`
+<br />
 
