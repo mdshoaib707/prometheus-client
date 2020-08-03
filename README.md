@@ -30,12 +30,21 @@ Deploy Prometheus, Grafana in the k8s cluster
 cd prometheus-client/ci/prometheus-deploy/
 sh helm.sh
 ```
-The script will deploy prometheus, grafana, alert manager in the cluster using the values.yml file. We have added the scrap config for our python app to collect metrics from. It is mentioned here https://github.com/mdshoaib707/prometheus-client/blob/develop/ci/prometheus-deploy/values.yml#L1874-L1876. The "static_configs" is where our python app is running. This will deploy under `monitroing` namespace. <br />
+The script will deploy prometheus, grafana, alert manager in the cluster using the values.yml file. We have added the scrap config for our python app to collect metrics from. It is mentioned here https://github.com/mdshoaib707/prometheus-client/blob/develop/ci/prometheus-deploy/values.yml#L1874-L1876. The "static_configs" is where our python app is running. This will deploy under `monitoring` namespace. <br />
 
 Deploy the python app in cluster.
-
 ```
 cd prometheus-client/ci/
 helm upgrade --install myapp --namespace app myapp --debug
 ```
-This will deploy the app under `app` namespace.
+This will deploy the app under `app` namespace. <br />
+
+Once our app is deployed we can see the metrics in prometheus as below.
+
+![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/sample-url-up-prometheus.png)
+![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/prometheus-metrics.png)
+![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/prometheus-all-metrics.png)
+
+We can see the average response time in milliseconds by using the following formula.
+![header image]https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/average-response-duration.png
+![header image]https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/average-response-5m-msec.png
