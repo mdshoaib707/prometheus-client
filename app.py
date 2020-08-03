@@ -35,7 +35,6 @@ def metrics():
             URLSTATUS.labels(url=url1).set(0)
             RESPONSETIME.labels(url=url1).observe(responseMilliSecs)
 
-
     return generate_latest(REGISTRY)
 
 
