@@ -24,9 +24,18 @@ docker build -t mdshoaib707/prometheus-client:1.2 .
 docker push mdshoaib707/prometheus-client:1.2
 ```
 
+Helm version used is helm3.
 Deploy Prometheus, Grafana in the k8s cluster
 ```
 cd prometheus-client/ci/prometheus-deploy/
 sh helm.sh
 ```
-The script will deploy prometheus, grafana, alert manager in the cluster using the values.yml file. We have added the scrap config for our python app to collect metrics from. It is mentioned here https://github.com/mdshoaib707/prometheus-client/blob/develop/ci/prometheus-deploy/values.yml#L1874-L1876
+The script will deploy prometheus, grafana, alert manager in the cluster using the values.yml file. We have added the scrap config for our python app to collect metrics from. It is mentioned here https://github.com/mdshoaib707/prometheus-client/blob/develop/ci/prometheus-deploy/values.yml#L1874-L1876. The "static_configs" is where our python app is running. This will deploy under `monitroing` namespace. <br />
+
+Deploy the python app in cluster.
+
+```
+cd prometheus-client/ci/
+helm upgrade --install myapp --namespace app myapp --debug
+```
+This will deploy the app under `app` namespace.
