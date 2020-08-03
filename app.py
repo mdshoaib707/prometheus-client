@@ -19,7 +19,7 @@ def index():
 @app.route('/metrics')
 def metrics():
 
-    for uri in ("200", "502"):
+    for uri in ("200", "503"):
         url1 = "https://httpstat.us/" + uri
         response = requests.get(url1, timeout=5)
         responseMilliSecs = 1000 * response.elapsed.total_seconds()
