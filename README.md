@@ -6,6 +6,9 @@ The main code is written in the file "app.py". It runs on 5000 port. In this fil
 To run the application, type in the command <br />
 `python3 app.py`
 
+To test the application, type in the command <br />
+`python3 test_app.py`
+
 Once the application is running we will get the metrics in "/metrics" as seen in the below screenshot. <br />
 
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/app-metrics.png)
@@ -46,6 +49,9 @@ Once our app is deployed we can see the metrics in prometheus as below. <br />
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/prometheus-all-metrics.png)
 
 
-<br /><b>We can see the average response time in milliseconds by using the following formula.</b><br />
+<br /><h3><b>We can see the average response time in milliseconds by using the following formula.</b></h3><br />
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/average-response-duration.png)
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/average-response-5m-msec.png)
+
+<br /><h3><b>To check the 95 percentile of the metrics use the below formula.</b></h3><br />
+![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/percent-95-quantile.png)
