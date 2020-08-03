@@ -39,12 +39,13 @@ helm upgrade --install myapp --namespace app myapp --debug
 ```
 This will deploy the app under `app` namespace. <br />
 
-Once our app is deployed we can see the metrics in prometheus as below.
+Once our app is deployed we can see the metrics in prometheus as below. <br />
 
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/sample-url-up-prometheus.png)
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/prometheus-metrics.png)
 ![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/prometheus-all-metrics.png)
 
+
 We can see the average response time in milliseconds by using the following formula.
-![header image]https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/average-response-duration.png
-![header image]https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/average-response-5m-msec.png
+![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/average-response-duration.png)
+![header image](https://github.com/mdshoaib707/prometheus-client/blob/develop/screenshots/average-response-5m-msec.png)
